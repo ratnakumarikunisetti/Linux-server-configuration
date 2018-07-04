@@ -59,6 +59,15 @@ Kwa/dYweiuGL45qOOtGvnavF0l8utag10D4A/Im2OOCF8MLiAcPxtaLH+G4E2mk8
 wc7w2ISim3pqJwO/GsBz/F0aVuTtea9Rw3Rb/r+gu+0FOcyIj+x6PVXfZstUxxBz
 QqzWFPUXLVnWPl//90yroyDdxrUKIXHE1VZakbqTKYf4IHMnd3as
 -----END RSA PRIVATE KEY-----
+id_rsa pub:
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC1W8IwQCZTAxYtnMnQ8uTSMy2vE/E0bc7DhsoOCNeJSogjHqDvpQk92W0M4i+6YI1wt28yJoUaWFTZXoIk7DJuyq7o1+u2NwezkW++V04/OaoqC1k2TmV3tWrRWp9ZHqr+/CNgcsosAf2G59BtE2FuW4H7QojqrEN9xp4Z6GbNWHSF8HZabx8CRlX+wirdCSEaq+LUubbMC6h4FaLOIhP2jbKtBADxLuN7SRpemmucJgEFbGX0YxVwPKdtnkj9txOjUSK00X8t+SJGGo390NVaIVXfnPBw3QuMmktmtWLxHy5VzIp4h1dD6vrmBQqcugrWkcVrsmlNR9SDPSXNd9ef hp@DESKTOP-E82NM60
+known_hosts
+13.232.84.38 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBAOG775OzxLrhsqKfsbIfJ/nBr8pUCyrwi99/if0fyNqvTuC8u8I7SWcygh3/EXM/1W3RvSQe7J49r0/KEzN91I=
+13.232.29.129 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBBx0u1krBWwQcf4v5YcLPq3Rd1UxPs2KyJNzK5FQzX8GFgku9nUq+hXydO/RoBu8oHzIxqFBKPmABAnQggxmfqA=
+13.232.43.94 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBLeEktMk2paNNKk9+CIOQ6y7zdqYetkW70v56mvUFvLdhMWx27MRCw9R8YOProOB64C8LwR228z4T5KtwYG/OQM=
+13.126.48.184 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBAHsWrX3KV+ODfnXh2UtP4QuQuobIjaI3iBeKBRLlgcYXf6NGbcaeF5Va/8n9ASbEapWRatUcCSu1O4GMV51QvQ=
+
+
 
 
 
@@ -79,7 +88,7 @@ chmod 644 .ssh/authorized_keys
 service ssh restart
 Now from your log in to grader with private key generated
 
-ssh -i .ssh/id_rsa grader@ipaddress 
+ssh -i .ssh/id_rsa grader@13.126.48.184
 Changing the ssh port to 2200
 sudo nano /etc/ssh/sshd_config
 Change port 22 to port 2200
@@ -109,8 +118,6 @@ After that
 sudo ufw status
 It will display all allowed ports
 
-Changing time Zone
-sudo dpkg-reconfigure tzdata
 
 select none from list and then select utc.
 
