@@ -255,3 +255,4 @@ Final Step
 Restart your apache2 server
 
 sudo service apache2 restart
+goto chrome and run project as http://13.126.48.184.xip.io
